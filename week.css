@@ -1,0 +1,104 @@
+
+table.calendar {
+    margin-bottom: 0;
+}
+.table{
+  margin-left: auto;
+  margin-right: auto;
+}
+table{
+    border: 2px solid rgb(51,73,94);;
+   
+   
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    
+}
+caption{
+    padding: 7px 20px;
+    background-color:rgb(51,73,94);
+    color:white;
+    font-weight: bold;
+    border: 2px solid rgb(51,73,94);;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+table.calendar > thead > tr > th {
+  padding-top:5px;
+    text-align: center;
+    
+}
+tr:hover{
+    background-color:lightgrey;
+}
+
+
+table.calendar > tbody > tr > td {
+    height: 20px;
+}
+table.calendar > tbody > tr > td{
+  text-align: center;
+  
+}
+table.calendar > tbody > tr > td >div{
+    padding: 8px;
+    height: 40px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+
+
+table.calendar > tbody > tr > td.has-events {
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 4px;
+}
+
+table.calendar > tbody > tr > td.has-events > div {
+    background-color: #08C;
+    border-left: 1px solid white;
+}
+
+table.calendar > tbody > tr > td.has-events > div:first-child {
+    border-left: 0;
+    margin-left: 1px;
+}
+
+table.calendar > tbody > tr > td.has-events > div.practice {
+    opacity: 0.7;
+}
+
+table.calendar > tbody > tr > td.conflicts > div > span.title {
+    color: red;
+}
+
+table.calendar > tbody > tr > td.max-conflicts > div {
+    background-color: red;
+    color: white;
+}
+
+table.calendar > tbody > tr > td.has-events > div > span {
+    display: block;
+    text-align: center;
+}
+table.calendar > tbody > tr > td.has-events > div > span a {
+    color: white;
+}
+
+table.calendar > tbody > tr > td.has-events > div > span.title {
+    font-weight: bold;
+}
+
+table.table-borderless > thead > tr > th, table.table-borderless > tbody > tr > td {
+    border: 0;
+}
+
+.table tbody tr.hover td, .table tbody tr.hover th {
+    background-color: whiteSmoke;
+}
