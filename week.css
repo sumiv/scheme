@@ -1,3 +1,40 @@
+/* Navigation Bar */
+#nav a {
+	display:block;
+    text-align:center;
+    width:138px; 
+    text-decoration:none; 
+}
+
+body {
+	padding: 3%;
+}
+		
+/* Navbar container */
+.nav-bar {
+  overflow: hidden;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.nav-bar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+a:hover {
+  background-color: #b2b1b1;
+  color: #fff;
+  border-radius: 10px;
+}
+.nav-bar .active {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 table.calendar {
     margin-bottom: 0;
@@ -50,49 +87,6 @@ table.calendar > tbody > tr > td >div{
     display: inline-block;
     vertical-align: middle;
     
-}
-
-
-table.calendar > tbody > tr > td.has-events {
-    color: white;
-    cursor: pointer;
-    padding: 0;
-    border-radius: 4px;
-}
-
-table.calendar > tbody > tr > td.has-events > div {
-    background-color: #08C;
-    border-left: 1px solid white;
-}
-
-table.calendar > tbody > tr > td.has-events > div:first-child {
-    border-left: 0;
-    margin-left: 1px;
-}
-
-table.calendar > tbody > tr > td.has-events > div.practice {
-    opacity: 0.7;
-}
-
-table.calendar > tbody > tr > td.conflicts > div > span.title {
-    color: red;
-}
-
-table.calendar > tbody > tr > td.max-conflicts > div {
-    background-color: red;
-    color: white;
-}
-
-table.calendar > tbody > tr > td.has-events > div > span {
-    display: block;
-    text-align: center;
-}
-table.calendar > tbody > tr > td.has-events > div > span a {
-    color: white;
-}
-
-table.calendar > tbody > tr > td.has-events > div > span.title {
-    font-weight: bold;
 }
 
 table.table-borderless > thead > tr > th, table.table-borderless > tbody > tr > td {
