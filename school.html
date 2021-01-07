@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Scheme</title>
     <link rel="stylesheet" href="school.css">
+    
     <script type="text/javascript">
       function codeLink(s1,n1,c1) {
         var s1 = document.getElementById(s1);
@@ -55,6 +56,12 @@
   </head>
 
   <body>
+    <div id="nav" class="nav-bar">
+      <a href="index.html">Home</a>
+      <a class="active" href="school.html">School Format</a>
+      <a href="week.html">Week Format</a>
+      <a href="about.html">About</a>
+    </div>
     <div class="space">
       <div class="row">
         <div class="inputting">
@@ -66,32 +73,44 @@
               <placeholder="Google Meet">
               <option  value="Google Meet">Google Meet</option>
               <option  value="Other Link">Other Link</option>
-            </select>       
+            </select> 
+                 
           </div>
           <div class="code-label">
             <input id="codeInput" class="form-control" type="text" placeholder="Meet Code">
           </div>
-          <input id="time1" class="timeInput" type="time">
-        <div class="button">
-          <hr/>
+          <div class="timeInput">
+            <input id="time1" class="timeInput" type="time" onchange="notif(this.id)">
+          </div>
           <button id="addButton" class="btn btn-dark" onclick="newRow">
             <img src="plus.svg">
-          </button>
-        </div>
+          </button> 
         <script>
-          function not(t1) {
-            var t1 = document.getElementById(t1);
+        function showNotification() {
+    		  const notification = new Notification("Scheme", {
+            body: "Your class is starting!"
+          });
+    	  }
+        function notif(t1) {
+          var t1 = document.getElementById(t1);
+          var dt = new Date();
+          var dtd = dt.toLocaleDateString();
 
-            var date = new Date();
-            var timee = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+          if(t1.value === dtd) {
+            console.log(Notification.permission);
 
-            if(t1.value === timee.value) {
-              alert("Your class is starting!"+'codeInput');
-            }
-            setTimeout(not, 500);
+    	      if(Notification.permission === "granted") {
+    		      showNotification();
+    	      } else if(Notification.permission !== "denied") {
+    		      Notification.requestPermission().then(permission => {
+    			      showNotification();
+    		      });
+    	      }
           }
-          not();
-        </script> 
+          setTimeout(notif,10);
+        }
+
+      </script>
       </div>
     </div>
   </body>
